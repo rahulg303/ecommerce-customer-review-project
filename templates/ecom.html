@@ -1,0 +1,123 @@
+<html>
+
+<head> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Customer Rating Prediction</title>
+</head>
+    
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Customer Rating Prediction</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="http://localhost:5000" method="post">
+
+
+	    <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                             <h5 class="card-title">Price</h5>
+                            <!-- price -->
+                            <input type="float name="Price" id="Price" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Freight Value</h5>
+                            <!-- Freight Value -->
+                            <input type="float name="Freight Value" id="Freight Value" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+	    <br>
+            <br>
+            <br>
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Order Status</h5>
+                            <!-- Gender -->
+                            <select name="Order Status" id="Order Status" required="required">
+				<option value="Delivered">Delivered</option>
+                                <option value="Shipped">Shipped</option>
+				<option value="Canceled">Canceled</option>
+				<option value="Processing">Processing</option>
+				<option value="Invoiced">Invoiced</option>
+				<option value="Unavailable">Unavailable</option>
+				<option value="Approved">Approved</option>
+			    </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Partner -->
+                            <h5 class="card-title">Payment Type</h5>
+                            <select name="Payment Type" id="Payment Type" required="required">
+                                <option value="Credit Card">Credit Card</option>
+                                <option value="Debit Card">Debit Card</option>
+				<option value="Voucher">Voucher</option>
+				<option value="Boleto">Boleto</option>
+			    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br>
+        <h3>{{ output }}</h3>
+
+ 
+        <br>
+         <p>2022 Rahul Goyal</p>
+
+    </div>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
